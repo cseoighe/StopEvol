@@ -9,8 +9,8 @@ in many multicellular eukaryotes is selective rather than mutational in origin.
 
 There are two different forms of R script. 
 
-* **First** method, generates maximum likelihood estimates of parameters using a stop-codon-extended model given a phylogenetic tree and a codon-aware alignment ([stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)).
-* **Second** method, uses the stop-codon model to simulate an alignment when given a phylogenetic tree and a parameter file ([sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)) and ([sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)) representing the Goldman-Yang with a F1x4 and Muse-Gaut models respectively to estimate equilibrium frequencies.
+* **First method:** generates maximum likelihood estimates of parameters using a stop-codon-extended model given a phylogenetic tree and a codon-aware alignment ([stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)).
+* **Second method:** uses the stop-codon model to simulate an alignment when given a phylogenetic tree and a parameter file ([sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)) and ([sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)) representing the Goldman-Yang with a F1x4 and Muse-Gaut models respectively to estimate equilibrium frequencies.
 
 ***
 
