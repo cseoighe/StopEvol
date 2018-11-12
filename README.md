@@ -24,9 +24,9 @@ stop codon as the last position of the alignment. Sequences that include a gap o
 a stop codon (i.e. sequences for which the stop codon is not positionally homologous with the last 
 position in the alignment) are excluded.
 
-The R script [sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript) requires as input, a paramter file and a phylogenetic tree file expaining the relatedness of the alignment. The parameter file is a textfile containing the following 4 values on a single line: gene_name kappa omega alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs coding sequences are simulated from the stop-extended codon model, based on GY94 X HKY85 X empirical triplet frequencies obtained from the corresponding intron sequences.
+The R script [sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript) requires a paramter file and a phylogenetic tree file expaining the relatedness of the alignment as it's input. The parameter file is a textfile containing the following 4 values on a single line: gene_name kappa omega alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs coding sequences are simulated from the stop-extended codon model, based on GY94 X HKY85 X empirical triplet frequencies obtained from the corresponding intron sequences.
 
-The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires as input, a paramter file and a phylogenetic tree file expaining the relatedness of the alignment. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs coding sequences are simulated from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
+The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires a paramter file and a phylogenetic tree file expaining the relatedness of the alignment as it's input. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs coding sequences are simulated from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
 ***
 
 ### Prerequisites
@@ -38,7 +38,7 @@ The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/mast
 * Additional to the tree file (".ph") discussed above, a paramter file is required. Aparmeter file with 4 values is required. A sample file is [params_empirical](https://github.com/cseoighe/StopEvol/blob/master/params_empirical) is located in this repository.
 
 **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
-* Additional to the tree file (".ph") discussed above, a paramter file is required. A parmeter file with 6 values is required. A sample file is [params](https://github.com/cseoighe/StopEvol/blob/master/params) is located in this repository. 
+* Additional to the tree file (".ph") discussed above, a paramter file is required. A parmeter file with 8 values is required. A sample file is [params](https://github.com/cseoighe/StopEvol/blob/master/params) is located in this repository. 
 
 **All Scripts:**
 * Require "R" packages "ape" and "expm":
