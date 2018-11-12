@@ -7,7 +7,7 @@ in many multicellular eukaryotes is selective rather than mutational in origin.
 
 ### Getting Started
 
-The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/stopcodon.rscript) requires as input, a sequence alignment file in FASTA format and a phylogenetic tree file expaining the relatedness of the alignment.
+The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires as input, a sequence alignment file in FASTA format and a phylogenetic tree file expaining the relatedness of the alignment.
 
 The tree file should include branch lengths. Note that relative branch lengths are treated as fixed.
 The sequence file should contain a codon-aware alignment in fasta format and must include the 
