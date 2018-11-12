@@ -31,7 +31,16 @@ The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/mast
 
 ### Prerequisites
 
+**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
 * Require tree file (".ph") and a codon-aware sequence alignment (".fasta"). Sample files can be simultaneously obtained from the [OrthoMam](http://www.orthomam.univ-montp2.fr/orthomam/html/) database which is a database of orthologous mammalian markers. Using the “Browse” tab, the “CDS” option at the top of the page was highlighted. Then the “submit” button at the base of the page was pressed. It is possible to limit the tree to specific species based on clicking the icon that accompanies each image, and chromosome by selecting the correct chromosome. Marker’s can be selected by ticking the requisite box in thefar left column. After selection, the accompanying maximun likelihood tree and nucleotide alignment file can be downloaded together by clicking the download icon at the base of the page.  Although it requires a longer computational time, it is advised to use a greater number of taxa in the alignment as the power to detect purifying selection acting on stop codon use is limited by the number of taxa.
+
+**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)** 
+* Additional to the tree file (".ph") discussed above, a paramter file is required. Aparmeter file with 4 values is required. A sample file is [params_empirical](https://github.com/cseoighe/StopEvol/blob/master/params_empirical) is located in this repository.
+
+**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript**
+* Additional to the tree file (".ph") discussed above, a paramter file is required. A parmeter file with 6 values is required. A sample file is [params](https://github.com/cseoighe/StopEvol/blob/master/params) is located in this repository. 
+
+**All Scripts:**
 * Require "R" packages "ape" and "expm":
 
 These are then called usng the "require" function in the R script:
@@ -55,6 +64,7 @@ install.packaages("expm")
 ***
 
 ### Running the tests
+##**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
 
 The code is ran in the Linux command line using the following command:
 
@@ -99,6 +109,74 @@ write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
 ```
 ***
 
+### Running the tests
+##**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
+
+The code is ran in the Linux command line using the following command:
+
+```
+Rscript sim_gyempirical.rscript treefile parameterfile
+```
+
+Where "paramterfile" is a text file containing the following 4 values on a single line: gene_name kappa omega alignment_length_in_codons and the "treefile.ph" is a maximum likelihood estimate of the tree given the codon-aware alignment.
+
+***
+
+
+### Break down into end to end tests
+
+Ensure all data is in the required directory. Then enter this directory using the "cd" command in the linux command line followed by the path to the data directory.
+
+```
+cd /home/YourDataDirectory
+```
+Run the R script using the Rscript command.
+
+```
+Rscript sim_gyempirical.rscript treefile parameterfile
+```
+
+**Output:** A file called <gene_name>.sim.gyempirical.fastas containing a simulated coding sequence alignment, including
+stop codon
+
+```
+<gene_name>.sim.gyempirical.fastas
+```
+
+### Running the tests
+##**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
+
+The code is ran in the Linux command line using the following command:
+
+```
+Rscript sim_mgf1x4.rscriptt treefile parameterfile
+```
+
+Where "paramterfile" is a text file containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T (equilibrium frequencies) alignment_length_in_codons and the "treefile.ph" is a maximum likelihood estimate of the tree given the codon-aware alignment.
+
+***
+
+
+### Break down into end to end tests
+
+Ensure all data is in the required directory. Then enter this directory using the "cd" command in the linux command line followed by the path to the data directory.
+
+```
+cd /home/YourDataDirectory
+```
+Run the R script using the Rscript command.
+
+```
+Rscript sim_mgf1x4.rscriptt treefile parameterfile
+```
+
+**Output:** A file called <gene_name>.sim.mgf1x4.fastas containing a simulated coding sequence alignment, including
+stop codon
+
+```
+<gene_name>.sim.mgf1x4.fastas
+```
+***
 ### Authors
 
 * **Cathal Seoighe** - *Initial work* - [StopEvol](https://github.com/cseoighe/StopEvol)
