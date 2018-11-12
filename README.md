@@ -5,6 +5,15 @@ in many multicellular eukaryotes is selective rather than mutational in origin.
 
 ***
 
+### R Scripts
+
+There are two different forms of R script. 
+
+* **First** method, generates maximum likelihood estimates of parameters using a stop-codon-extended model given a phylogenetic tree and a codon-aware alignment ([stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript).
+* **Second** method, uses the stop-codon model to generate an alignment when given a phylogenetic tree and a parameter file. [sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript) and [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)
+
+***
+
 ### Getting Started
 
 The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires as input, a codon-aware sequence alignment file in FASTA format and a phylogenetic tree file expaining the relatedness of the alignment.
