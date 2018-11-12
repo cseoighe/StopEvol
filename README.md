@@ -37,7 +37,7 @@ The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/mast
 **[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)** 
 * Additional to the tree file (".ph") discussed above, a paramter file is required. Aparmeter file with 4 values is required. A sample file is [params_empirical](https://github.com/cseoighe/StopEvol/blob/master/params_empirical) is located in this repository.
 
-**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript**
+**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 * Additional to the tree file (".ph") discussed above, a paramter file is required. A parmeter file with 6 values is required. A sample file is [params](https://github.com/cseoighe/StopEvol/blob/master/params) is located in this repository. 
 
 **All Scripts:**
@@ -64,7 +64,7 @@ install.packaages("expm")
 ***
 
 ### Running the tests
-##**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
+**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
 
 The code is ran in the Linux command line using the following command:
 
@@ -110,7 +110,7 @@ write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
 ***
 
 ### Running the tests
-##**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
+**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
 
 The code is ran in the Linux command line using the following command:
 
@@ -144,7 +144,7 @@ stop codon
 ```
 
 ### Running the tests
-##**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
+**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 
 The code is ran in the Linux command line using the following command:
 
