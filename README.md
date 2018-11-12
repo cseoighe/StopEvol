@@ -89,7 +89,7 @@ write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
 
 ### Authors
 
-* **Cathal Seoighe** - *Initial work* - [StopCodon](https://github.com/cseoighe/StopEvol)
+* **Cathal Seoighe** - *Initial work* - [StopEvol](https://github.com/cseoighe/StopEvol)
 * **Stephen J. Kiniry**
 * **Pavel V. Baranov**
 * **Haixuan Yang**
