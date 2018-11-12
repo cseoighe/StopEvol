@@ -96,4 +96,10 @@ write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
 
 ***
 
+### License
+
+This project is licensed  - see the [LICENSE](LICENSE) file for details
+
+***
+
 ### Acknowledgments
