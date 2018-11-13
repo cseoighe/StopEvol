@@ -150,7 +150,7 @@ Rscript sim_gyempirical.rscript treefile parameterfile
 ```
 
 **Output:** A file called <gene_name>.sim.gyempirical.fastas containing a simulated coding sequence alignment, including
-stop codon
+stop codon.
 
 ```
 <gene_name>.sim.gyempirical.fastas
@@ -184,7 +184,7 @@ Rscript sim_mgf1x4.rscript treefile parameterfile
 ```
 
 **Output:** A file called <gene_name>.sim.mgf1x4.fastas containing a simulated coding sequence alignment, including
-stop codon
+stop codon.
 
 ```
 <gene_name>.sim.mgf1x4.fastas
