@@ -60,6 +60,19 @@ The "ape" and "expm" packages are installed in the "R" environment using the "in
 install.packages("ape")
 install.packaages("expm")
 ```
+***
+
+### Information
+
+The following sections are broken down into:
+
+* **Running the tests**
+* **Break down into end to end tests**
+
+For the respective files
+* **[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
+* **[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
+* **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 
 ***
 
