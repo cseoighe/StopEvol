@@ -1,65 +1,39 @@
 ## Selection shapes synonymous stop codon use in mammals
 
-Phylogenetic models of the evolution of protein-coding sequences can provide insights into the selection pressures that have shaped them. In the application of these models synonymous nucleotide substitutions, which do not alter the encoded amino acid, are often assumed to have limited functional consequences and used as a proxy for the neutral rate of evolution. The ratio of nonsynonymous to synonymous substitution rates is then used to categorize the selective regime that applies to the protein (e.g. purifying selection, neutral evolution, diversifying selection). Here, we extend these models to explore the extent of purifying selection acting on substitutions between synonymous stop codons. Our results suggest that the preference for UGA stop codons
-in many multicellular eukaryotes is selective rather than mutational in origin.
+
+Phylogenetic models of the evolution of protein-coding sequences can provide insights into the selection pressures that have shaped them. In the application of these models synonymous nucleotide substitutions, which do not alter the encoded amino acid, are often assumed to have limited functional consequences and used as a proxy for the neutral rate of evolution. The ratio of nonsynonymous to synonymous substitution rates is then used to categorize the selective regime that applies to the protein (e.g. purifying selection, neutral evolution, diversifying selection). Here, we extend these models to explore the extent of purifying selection acting on substitutions between synonymous stop codons. 
 
 ***
 
 ### R Scripts
 
-There are two different functions for the R script's in this repository:
+We implemeted the stop-extended codon model in R and provide the following R scripts to fit and simulate from the model:
+* Given a phylogenetic tree and an in-frame sequence alignment (that includes the stop codon as the last position of the alignment), obtain maximum likelihood estimates of model parameters
+([stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)).
+* Simulate a codon sequence alignment (including stop codon) from the stop-extended codon model, built on the Muse and Gaut codon model and the F1x4 model of codon equilibrium frequencies ([sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)). The script requires a phylogenetic tree (with branch lengths, defined as substitutions per codon site) and a textfile containing the parameters of the model,
 
-* **First method:** generates maximum likelihood estimates of parameters using a stop-codon-extended model given a phylogenetic tree and a codon-aware alignment ([stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)).
-* **Second method:** uses the stop-codon model to simulate an alignment when given a phylogenetic tree and a parameter file ([sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)) and ([sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)) representing the Goldman-Yang with a F1x4 and Muse-Gaut models respectively.
 
 ***
 
 ### Getting Started
 
-The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires a codon-aware sequence alignment file in FASTA format and a phylogenetic tree file expaining the relatedness of the alignment as input.
+The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires a codon-aware sequence alignment file in FASTA format and a phylogenetic tree, with branch lengths, estimated from a cognate standard codon model (the default model implemented in the R script is the Muse and Gaut (1994) model with the F1x4 model of codon equilibrium frequencies).  
 
-The tree file should include branch lengths. Note that relative branch lengths are treated as fixed.
+Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length.
+
 The sequence file should contain a codon-aware alignment in FASTA format and must include the 
 stop codon as the last position of the alignment. Sequences that include a gap or a codon other than
 a stop codon (i.e. sequences for which the stop codon is not positionally homologous with the last 
 position in the alignment) are excluded.
 
-The R script [sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript) requires a paramter file and a phylogenetic tree file explaining the relatedness of the alignment as it's input. The parameter file is a textfile containing the following 4 values on a single line: gene_name kappa omega alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs, coding sequences are simulated to form an alignment from the stop-extended codon model, based on GY94 X HKY85 X empirical triplet frequencies obtained from the corresponding intron sequences.
-
-The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires a paramter file and a phylogenetic tree file expaining the relatedness of the alignment as it's input. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T alignment_length_in_codons. The treefile should contain branch lengths and taxa. Using these inputs, coding sequences are simulated to form an alignment from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
+The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires a paramter file and a phylogenetic tree file as arguments. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T required_alignment_length_in_codons. The treefile should contain branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
 ***
 
 ### Prerequisites
 
-**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
-* Require tree file (".ph") and a codon-aware sequence alignment (".fasta"). Sample files can be simultaneously obtained from the [OrthoMam](http://www.orthomam.univ-montp2.fr/orthomam/html/) database which is a database of orthologous mammalian markers. Using the “Browse” tab, the “CDS” option at the top of the page was highlighted. Then the “submit” button at the base of the page was pressed. It is possible to limit the tree to specific species based on clicking the icon that accompanies each image, and chromosome by selecting the correct chromosome. Marker’s can be selected by ticking the requisite box in thefar left column. After selection, the accompanying maximun likelihood tree (Example: [Tree.ph](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_NT.rootree)) and nucleotide alignment file (Example: [Alignment.fasta](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_filtered_NT.fasta)) can be downloaded together by clicking the download icon at the base of the page.  Although it requires a longer computational time, it is advised to use a greater number of taxa in the alignment as the power to detect purifying selection acting on stop codon use is limited by the number of taxa.
-
-**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)** 
-* Additional to the tree file (".ph") discussed above, a paramter file is required. Aparmeter file with 4 values is required. A sample file is [params_empirical](https://github.com/cseoighe/StopEvol/blob/master/params_empirical) is located in this repository.
-
-**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
-* Additional to the tree file (".ph") discussed above, a paramter file is required. A parmeter file with 8 values is required. A sample file is [params](https://github.com/cseoighe/StopEvol/blob/master/params) is located in this repository. 
-
 **All Scripts:**
 * Require "R" packages "ape" and "expm":
 
-These are then called usng the "require" function in the R script:
-
-```
-require(ape)
-require(expm)
-```
-
-***
-
-### Installing
-
-The "ape" and "expm" packages are installed in the "R" environment using the "install.packages()" command.
-
-```
-install.packages("ape")
-install.packaages("expm")
-```
 ***
 
 ### Information
@@ -69,9 +43,9 @@ The following sections are broken down into:
 * **Running the tests**
 * **Break down into end to end tests**
 
-For the respective files
+For the following scripts 
 * **[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
-* **[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
+<!-- * **[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)** -->
 * **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 
 ***
@@ -79,13 +53,13 @@ For the respective files
 ### Running the tests
 **[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
 
-The code is ran in the Linux command line using the following command:
+The code is run on the command line using the following command:
 
 ```
 Rscript stopcodon.rscript <treefile.ph> <seqfile.fasta>
 ```
 
-Where "seqfile.fasta" is a codon-aware alignment of the sequence data and the "treefile.ph" is a maximum likelihood estimate of the tree given the codon-aware alignment.
+Where "treefile.ph" contains a phylogenetic tree with branch lengths and "seqfile.fasta" is a codon-aware alignment.
 
 ***
 
@@ -125,7 +99,7 @@ write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
 ### Running the tests
 **[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
 
-The code is ran in the Linux command line using the following command:
+The code is run on the command line using the following command:
 
 ```
 Rscript sim_gyempirical.rscript treefile parameterfile
@@ -159,7 +133,7 @@ stop codon.
 ### Running the tests
 **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 
-The code is ran in the Linux command line using the following command:
+The code is run on the command line using the following command:
 
 ```
 Rscript sim_mgf1x4.rscript treefile parameterfile
