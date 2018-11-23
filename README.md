@@ -88,6 +88,7 @@ Rscript stopcodon.rscript ENSG00000111276_CDKN1B.ph CDKN1B.sim.mgf1x4.fastas
 * **Stephen J. Kiniry**
 * **Pavel V. Baranov**
 * **Haixuan Yang**
+* **Andrew Peters**
 
 ***
 
@@ -97,7 +98,5 @@ This project is licensed  - see the [LICENSE](LICENSE) file for details
 
 ***
 
-### Acknowledgments
-* **Andrew Peters (PhD)**
 
 
