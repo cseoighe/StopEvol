@@ -72,15 +72,6 @@ The script produces a sequence alignment file (including the stop codon) in FAST
 
 ***
 
-### Figures
-The following section describes:
-* Installed "R" packages
-* Description
-* Code used to generate each figure
-* Plot generated
-
-***
-
 ### Prerequisites
 All plots require:
 * "R" package "ggplot2" installed 
