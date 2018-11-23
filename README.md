@@ -39,7 +39,7 @@ Where "treefile.ph" contains a phylogenetic tree with branch lengths. Relative b
 Rscript sim_mgf1x4.rscript treefile parameterfile
 ```
 
-Where "paramterfile" is a text file containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T (equilibrium frequencies) alignment_length_in_codons and "treefile.ph" should contain a phylogenetic tree with branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from a stop-extended codon model, based on the parameterization of Mus & Gaut (1994), with the F1X4 model of codon equilibrium frequencies.
+Where "paramterfile" is a text file containing the following 9 values on a single line: gene_name kappa omega phi pi_A pi_C pi_G pi_T (equilibrium frequencies) alignment_length_in_codons and "treefile.ph" should contain a phylogenetic tree with branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from a stop-extended codon model, based on the parameterization of Mus & Gaut (1994), with the F1X4 model of codon equilibrium frequencies.
 
 
 ### Output format
@@ -59,6 +59,16 @@ The script produces a sequence alignment file (including the stop codon) in FAST
 
 
 ### Example data
+
+** Data to fit the model **
+
+**[Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)**
+**[Example alignment](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.fasta)**
+
+** Data to simulate from the model **
+
+**[Example parameter file](https://github.com/cseoighe/StopEvol/blob/master/example_parameter_file)**
+**[Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)**
 
 
 
