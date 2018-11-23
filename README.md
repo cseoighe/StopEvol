@@ -19,12 +19,12 @@ We implemeted the stop-extended codon model in R and provide the following R scr
 
 The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires a codon-aware sequence alignment file in FASTA format and a phylogenetic tree, with branch lengths, estimated from a cognate standard codon model (the default model implemented in the R script is the Muse and Gaut (1994) model with the F1x4 model of codon equilibrium frequencies).  
 
-Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length.
+Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length. An example codon aware alignment file is located in this repository: [ENSG00000009780_FAM76A_NT.rootree](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_NT.rootree)
 
 The sequence file should contain a codon-aware alignment in FASTA format and must include the 
 stop codon as the last position of the alignment. Sequences that include a gap or a codon other than
 a stop codon (i.e. sequences for which the stop codon is not positionally homologous with the last 
-position in the alignment) are excluded.
+position in the alignment) are excluded. An example codon aware alignment file is located in this repository: [ENSG00000009780_FAM76A_filtered_NT.fasta](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_filtered_NT.fasta)
 
 The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires a paramter file and a phylogenetic tree file as arguments. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T required_alignment_length_in_codons. The treefile should contain branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
 ***
