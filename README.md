@@ -82,23 +82,7 @@ Rscript stopcodon.rscript <treefile.ph> <seqfile.fasta>
 **Second Optimisation:** After the first optimisation has converged, a second optimisation is performed, this time, optimising also over the phi variable. Progress of the optimisation is again reported to the terminal window (current values of kappa, omega, treescale and phi). The fifth and final value to appear is the maximum likelihood value.
 
 
-**Output:** A file called ZZZstopcodon.rscript.out, which contains the following: The maximum log likelihood of the second optimisation; ML estimate of kappa of the second optimisation; ML estimate of omega of the second optimisation; ML estimate of the treescaling parameterof the second optimisation; ML estimate of phi delta_lnL (difference in log likelihood compared to a model with phi=1 calculated by getting the difference in maximum likelihood valies between the 2 optimisation procedures; convergence of optimizer (0 = success,1 = failure). 
-
-```
-write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
-```
-***
-
-### Running the tests
-**[sim_gyempirical.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_gyempirical.rscript)**
-
-The code is run on the command line using the following command:
-
-```
-Rscript sim_gyempirical.rscript treefile parameterfile
-```
-
-Where "paramterfile" is a text file containing the following 4 values on a single line: gene_name kappa omega alignment_length_in_codons and the "treefile.ph" is a maximum likelihood estimate of the tree given the codon-aware alignment.
+**Output:** A file with the same name as <seqfile> but with .stopcodon appended. It contains the following: The maximum log likelihood and parameter estimates (kappa, omega, treescale, phi) from the second optimisation (above), delta_lnL (the difference in log likelihood between the first optimisation, with phi fixed, and the second optimization, with phi a free parameter) and a number (0/1) indicating the successful convergence of the second optimization. 
 
 ***
 
@@ -111,17 +95,6 @@ Ensure all data is in the required directory. Then enter this directory using th
 cd /home/YourDataDirectory
 ```
 Run the R script using the Rscript command.
-
-```
-Rscript sim_gyempirical.rscript treefile parameterfile
-```
-
-**Output:** A file called <gene_name>.sim.gyempirical.fastas containing a simulated coding sequence alignment, including
-stop codon.
-
-```
-<gene_name>.sim.gyempirical.fastas
-```
 
 ### Running the tests
 **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
