@@ -78,6 +78,7 @@ The script produces a sequence alignment file (including the stop codon) in FAST
 #Simulate an 100 codon alignment from the model. In the example parameter file phi = 0.1
 Rscript sim_mgf1x4.rscript ENSG00000111276_CDKN1B.ph example_parameter_file
 
+#Fit the model
 Rscript stopcodon.rscript ENSG00000111276_CDKN1B.ph CDKN1B.sim.mgf1x4.fastas 
 ```
 
