@@ -218,8 +218,8 @@ print(c(pars,likelihood))
 }
 
 m0.out = optim(c(2,0.2,1),lik_fun,treefile=tree_file,seqfile=seq_file,phifixed=1,control=list(fnscale=-1))
-m1.out = optim(c(2,0.2,1,1),lik_fun,treefile=tree_file,seqfile=seq_file,control=list(fnscale=-1))
 print(m0.out)
+m1.out = optim(c(2,0.2,1,1),lik_fun,treefile=tree_file,seqfile=seq_file,control=list(fnscale=-1))
 print(m1.out)
 diff = m1.out$value - m0.out$value
 write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)

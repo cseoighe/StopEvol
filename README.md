@@ -77,19 +77,12 @@ Run the R script using the Rscript command.
 Rscript stopcodon.rscript <treefile.ph> <seqfile.fasta>
 ```
 
-**First Optimisation:** Four numbers will then appear in the terminal window. These iterively optimise the parameters: kappa, omega and treescale factor respectively, with initial starting values of 2 (kappa), 0.2 (omega) and 1 (tresscale). Kappa and omega are rate heterogeneity parameters that model transitions and non-synonymous substitutions respectively. The treescale scaling factor parameter was required to scale the branch lengths of the tree up or down, to account for the use of a different rate matrix in the 64x64 stop-codon extended model when compared with the general 61x61 codon model. The fourth and final value is the maximum likelihood value. These values are calculated letting phi, or the parameter which models mutation rate between alternative stop codons relative to the rate of synonymous substitutions between sense codons, equal to 1.
+**First Optimisation:** Four numbers will then appear in the terminal window. These show current estimates the parameters during the optimization. The parameters are: kappa, omega and treescale factor respectively, with initial starting values of 2 (kappa), 0.2 (omega) and 1 (tresscale). Kappa and omega are the transition-transversion rate ratio and the ratio of non-synonymous to synonymous substitutions, respectively. The treescale scaling factor parameter scales the tree length, to account for the use of a different rate matrix in the 64x64 stop-codon extended model when compared with the model from which the input tree branch lengths were obtained. The fourth and final value is the maximum likelihood value. In the initial optimization phi (the rate of substitution between stop codons relative to the synonymous substitutions between sense codons) is set to 1. 
 
-```
-m0.out = optim(c(2,0.2,1),lik_fun,treefile=tree_file,seqfile=seq_file,phifixed=1,control=list(fnscale=-1))
-```
+**Second Optimisation:** After the first optimisation has converged, a second optimisation is performed, this time, optimising also over the phi variable. Progress of the optimisation is again reported to the terminal window (current values of kappa, omega, treescale and phi). The fifth and final value to appear is the maximum likelihood value.
 
-**Second Optimisation:** After this optimisation procedure has converged, another optimisation procedure follows, this time allowing the phi variable to be calculated. Five numbers are optimised that appear iteravely in the terminal window:  kappa, omega, treescale, phi with initial values to be optimised: 2, 0.2, 1 and 1 respectively. The fifth and final value to appear is the maximum likelihood value.
 
-```
-m1.out = optim(c(2,0.2,1,1),lik_fun,treefile=tree_file,seqfile=seq_file,control=list(fnscale=-1))
-```
-
-**Output:** A file called stopcodon.rscript.out, which contains the following: The maximum log likelihood of the second optimisation; ML estimate of kappa of the second optimisation; ML estimate of omega of the second optimisation; ML estimate of the treescaling parameterof the second optimisation; ML estimate of phi delta_lnL (difference in log likelihood compared to a model with phi=1 calculated by getting the difference in maximum likelihood valies between the 2 optimisation procedures; convergence of optimizer (0 = success,1 = failure). 
+**Output:** A file called XXXstopcodon.rscript.out, which contains the following: The maximum log likelihood of the second optimisation; ML estimate of kappa of the second optimisation; ML estimate of omega of the second optimisation; ML estimate of the treescaling parameterof the second optimisation; ML estimate of phi delta_lnL (difference in log likelihood compared to a model with phi=1 calculated by getting the difference in maximum likelihood valies between the 2 optimisation procedures; convergence of optimizer (0 = success,1 = failure). 
 
 ```
 write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
