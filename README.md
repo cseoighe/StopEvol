@@ -62,15 +62,25 @@ The script produces a sequence alignment file (including the stop codon) in FAST
 
 **Data to fit the model**
 
-* [Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
-* [Example alignment](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.fasta)
+* [ENSG00000111276_CDKN1B.ph](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
+* [ENSG00000111276_CDKN1B.fasta](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.fasta)
 
 **Data to simulate from the model**
 
-* [Example parameter file](https://github.com/cseoighe/StopEvol/blob/master/example_parameter_file)
-* [Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
+* [example_parameter_file](https://github.com/cseoighe/StopEvol/blob/master/example_parameter_file)
+* [ENSG00000111276_CDKN1B.ph](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
 
 ***
+
+
+### Example analysis
+```
+#Simulate an 100 codon alignment from the model. In the example parameter file phi = 0.1
+Rscript sim_mgf1x4.rscript ENSG00000111276_CDKN1B.ph example_parameter_file
+
+Rscript stopcodon.rscript ENSG00000111276_CDKN1B.ph CDKN1B.sim.mgf1x4.fastas 
+```
+
 
 
 
