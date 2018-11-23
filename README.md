@@ -82,7 +82,7 @@ Rscript stopcodon.rscript <treefile.ph> <seqfile.fasta>
 **Second Optimisation:** After the first optimisation has converged, a second optimisation is performed, this time, optimising also over the phi variable. Progress of the optimisation is again reported to the terminal window (current values of kappa, omega, treescale and phi). The fifth and final value to appear is the maximum likelihood value.
 
 
-**Output:** A file called XXXstopcodon.rscript.out, which contains the following: The maximum log likelihood of the second optimisation; ML estimate of kappa of the second optimisation; ML estimate of omega of the second optimisation; ML estimate of the treescaling parameterof the second optimisation; ML estimate of phi delta_lnL (difference in log likelihood compared to a model with phi=1 calculated by getting the difference in maximum likelihood valies between the 2 optimisation procedures; convergence of optimizer (0 = success,1 = failure). 
+**Output:** A file called YYYstopcodon.rscript.out, which contains the following: The maximum log likelihood of the second optimisation; ML estimate of kappa of the second optimisation; ML estimate of omega of the second optimisation; ML estimate of the treescaling parameterof the second optimisation; ML estimate of phi delta_lnL (difference in log likelihood compared to a model with phi=1 calculated by getting the difference in maximum likelihood valies between the 2 optimisation procedures; convergence of optimizer (0 = success,1 = failure). 
 
 ```
 write(c(m1.out$value,m1.out$par,diff,m1.out$convergence),out_file,ncol=10)
