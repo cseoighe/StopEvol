@@ -19,7 +19,7 @@ We implemeted the stop-extended codon model in R and provide the following R scr
 
 The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires a codon-aware sequence alignment file in FASTA format and a phylogenetic tree, with branch lengths, estimated from a cognate standard codon model (the default model implemented in the R script is the Muse and Gaut (1994) model with the F1x4 model of codon equilibrium frequencies).  
 
-Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length. An example codon aware alignment file is located in this repository: [ENSG00000009780_FAM76A_NT.rootree](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_NT.rootree)
+Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length. An example phylogenetic tree file is located in this repository: [ENSG00000009780_FAM76A_NT.rootree](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000009780_FAM76A_NT.rootree)
 
 The sequence file should contain a codon-aware alignment in FASTA format and must include the 
 stop codon as the last position of the alignment. Sequences that include a gap or a codon other than
