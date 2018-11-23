@@ -86,9 +86,9 @@ Rscript stopcodon.rscript ENSG00000111276_CDKN1B.ph CDKN1B.sim.mgf1x4.fastas
 
 * **Cathal Seoighe**
 * **Stephen J. Kiniry**
+* **Andrew Peters**
 * **Pavel V. Baranov**
 * **Haixuan Yang**
-* **Andrew Peters**
 
 ***
 
