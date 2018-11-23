@@ -1,11 +1,17 @@
 ### Figures
 The following section describes:
-* Installed "R" packages
+* "R" packages
 * Description
 * Code used to generate each figure
 * Plot generated
 
 ***
+
+### R packages
+* Require ggplot2
+
+***
+
 ### Description
 [Fig 1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.1.png)
 
