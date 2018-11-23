@@ -10,7 +10,7 @@ R scripts to implement a model of codon sequence evolution that includes the sto
 R scripts to fit and simulate from the model:
 * [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript).  Given a phylogenetic tree and an in-frame sequence alignment (that includes the stop codon as the last position of the alignment), obtain maximum likelihood estimates of model parameters.
 
-*[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript). Given a phylogenetic tree (with branch lengths, defined as substitutions per codon site) and a textfile containing model parameters, simulate a codon sequence alignment (including stop codon) from the stop-extended codon model, based on the Muse and Gaut codon model and the F1x4 model of codon equilibrium frequencies 
+* [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript). Given a phylogenetic tree (with branch lengths, defined as substitutions per codon site) and a textfile containing model parameters, simulate a codon sequence alignment (including stop codon) from the stop-extended codon model, based on the Muse and Gaut codon model and the F1x4 model of codon equilibrium frequencies 
 
 ***
 
