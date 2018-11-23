@@ -17,8 +17,9 @@ R scripts to fit and simulate from the model:
 
 ### Prerequisites
 
-**All Scripts:**
-* Require "R" packages "ape" and "expm":
+**R packages:**
+* "ape" 
+* "expm"
 
 ***
 
@@ -29,7 +30,7 @@ R scripts to fit and simulate from the model:
 Rscript stopcodon.rscript <treefile.ph> <seqfile.fasta>
 ```
 
-Where "treefile.ph" contains a phylogenetic tree with branch lengths and "seqfile.fasta" is a codon-aware alignment.
+Where "treefile.ph" contains a phylogenetic tree with branch lengths. Relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length to allow for differences in branch length units, depending on the evolutionary model.  The input file "seqfile.fasta" contains a codon-aware alignment in FASTA format, which must include the stop codon as the last position of the alignment. Sequences that include a gap or a codon other than a stop codon (i.e. sequences for which the stop codon is not positionally homologous with the last position in the alignment) are excluded.
 
 
 **[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
@@ -38,72 +39,29 @@ Where "treefile.ph" contains a phylogenetic tree with branch lengths and "seqfil
 Rscript sim_mgf1x4.rscript treefile parameterfile
 ```
 
-Where "paramterfile" is a text file containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T (equilibrium frequencies) alignment_length_in_codons and the "treefile.ph" is a maximum likelihood estimate of the tree given the codon-aware alignment.
-
-***
+Where "paramterfile" is a text file containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T (equilibrium frequencies) alignment_length_in_codons and "treefile.ph" should contain a phylogenetic tree with branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from a stop-extended codon model, based on the parameterization of Mus & Gaut (1994), with the F1X4 model of codon equilibrium frequencies.
 
 
+### Output format
 
 
-### Input files
+**[stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript)**
 
-The R script [stopcodon.rscript](https://github.com/cseoighe/StopEvol/blob/master/stopcodon.rscript) requires a codon-aware sequence alignment file in FASTA format and a phylogenetic tree, with branch lengths, estimated from a cognate standard codon model (the default model implemented in the R script is the Muse and Gaut (1994) model with the F1x4 model of codon equilibrium frequencies).  
-
-Note that relative branch lengths are treated as fixed and not reoptimized. The script optimizes a scale factor that applies to the overall tree length.
-
-The sequence file should contain a codon-aware alignment in FASTA format and must include the 
-stop codon as the last position of the alignment. Sequences that include a gap or a codon other than
-a stop codon (i.e. sequences for which the stop codon is not positionally homologous with the last 
-position in the alignment) are excluded.
-
-The R script [sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript) requires a paramter file and a phylogenetic tree file as arguments. The parameter file is a textfile containing the following 8 values on a single line: gene_name kappa omega pi_A pi_C pi_G pi_T required_alignment_length_in_codons. The treefile should contain branch lengths (in units of substitutions per codon site). Using these inputs, a sequence alignment is simulated from the stop-extended codon model, based on MG94 X HKY85 X F1x4.
-***
+The script prints optimization progress to screen and, when complete, produces a text file with the same name as <seqfile> but with .stopcodon appended. It contains the following: The maximum log likelihood value obtained and parameter estimates (kappa, omega, treescale, phi), delta_lnL (the difference in maximum log likelihood between a model with phi fixed and with phi a free parameter, and a number (0/1) indicating the successful convergence of the optimization. 
 
 
-**First Optimisation:** Four numbers will then appear in the terminal window. These show current estimates the parameters during the optimization. The parameters are: kappa, omega and treescale factor respectively, with initial starting values of 2 (kappa), 0.2 (omega) and 1 (tresscale). Kappa and omega are the transition-transversion rate ratio and the ratio of non-synonymous to synonymous substitutions, respectively. The treescale scaling factor parameter scales the tree length, to account for the use of a different rate matrix in the 64x64 stop-codon extended model when compared with the model from which the input tree branch lengths were obtained. The fourth and final value is the maximum likelihood value. In the initial optimization phi (the rate of substitution between stop codons relative to the synonymous substitutions between sense codons) is set to 1. 
+**[sim_mgf1x4.rscript](https://github.com/cseoighe/StopEvol/blob/master/sim_mgf1x4.rscript)**
 
-**Second Optimisation:** After the first optimisation has converged, a second optimisation is performed, this time, optimising also over the phi variable. Progress of the optimisation is again reported to the terminal window (current values of kappa, omega, treescale and phi). The fifth and final value to appear is the maximum likelihood value.
-
-
-**Output:** A file with the same name as <seqfile> but with .stopcodon appended. It contains the following: The maximum log likelihood and parameter estimates (kappa, omega, treescale, phi) from the second optimisation (above), delta_lnL (the difference in log likelihood between the first optimisation, with phi fixed, and the second optimization, with phi a free parameter) and a number (0/1) indicating the successful convergence of the second optimization. 
-
-***
-
-
-### Break down into end to end tests
-
-Ensure all data is in the required directory. Then enter this directory using the "cd" command in the linux command line followed by the path to the data directory.
-
-```
-cd /home/YourDataDirectory
-```
-Run the R script using the Rscript command.
-
+The script produces a sequence alignment file (including the stop codon) in FASTA format, called <gene_name> (from the parameter file) with the extension .sim.mgf1x4.fastas appended.
 
 
 ***
 
 
-### Break down into end to end tests
+### Example data
 
-Ensure all data is in the required directory. Then enter this directory using the "cd" command in the linux command line followed by the path to the data directory.
 
-```
-cd /home/YourDataDirectory
-```
-Run the R script using the Rscript command.
 
-```
-Rscript sim_mgf1x4.rscript treefile parameterfile
-```
-
-**Output:** A file called <gene_name>.sim.mgf1x4.fastas containing a simulated coding sequence alignment, including
-stop codon.
-
-```
-<gene_name>.sim.mgf1x4.fastas
-```
-***
 ### Authors
 
 * **Cathal Seoighe**
