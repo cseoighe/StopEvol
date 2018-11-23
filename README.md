@@ -60,12 +60,12 @@ The script produces a sequence alignment file (including the stop codon) in FAST
 
 ### Example data
 
-** Data to fit the model **
+**Data to fit the model**
 
 * [Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
 * [Example alignment](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.fasta)
 
-** Data to simulate from the model **
+**Data to simulate from the model**
 
 * [Example parameter file](https://github.com/cseoighe/StopEvol/blob/master/example_parameter_file)
 * [Example tree file](https://github.com/cseoighe/StopEvol/blob/master/ENSG00000111276_CDKN1B.ph)
