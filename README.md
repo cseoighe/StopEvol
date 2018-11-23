@@ -81,9 +81,6 @@ Rscript sim_mgf1x4.rscript ENSG00000111276_CDKN1B.ph example_parameter_file
 Rscript stopcodon.rscript ENSG00000111276_CDKN1B.ph CDKN1B.sim.mgf1x4.fastas 
 ```
 
-
-
-
 ### Authors
 
 * **Cathal Seoighe**
@@ -102,5 +99,4 @@ This project is licensed  - see the [LICENSE](LICENSE) file for details
 ### Acknowledgments
 * **Andrew Peters (PhD)**
 
-### Test 
-![alt text](https://github.com/cseoighe/StopEvol/blob/master/Sim1.png)
+
