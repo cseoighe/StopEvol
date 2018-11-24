@@ -7,7 +7,6 @@ R code and data to fit a mixture model to data from the OrthoMaM (v.8) database 
 
 ### R Scripts
 
-mixture_mo
 * [mixture_model.rscript](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/mixture_model.rscript).  Fits the mixture model. 
 
 ***
