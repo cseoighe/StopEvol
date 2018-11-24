@@ -40,6 +40,9 @@ Rscript mixture_model.rscript
 
 ***
 
+### Output 
+
+Produces the text file  [mixture_model.out](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/mixture_model.out), containing the following 4 values: the maximum likelihood estimate of the phi parameter corresponding to stop codons under purifying selection; the mixture weight for the conserved stop codons; the maximum log-likelihood of the data; convergence indicator (0, pass; 1, fail). 
 
 
 

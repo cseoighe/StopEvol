@@ -1,7 +1,7 @@
 ## Selection shapes synonymous stop codon use in mammals
 
 
-R code and data required to reproduce figures and supplementary figures for an analysis of orthologue families from the OrthoMaM (v.8) database using the stop-extended codon model. 
+R code and data required to reproduce figures and supplementary figures for our analysis of orthologue families from the OrthoMaM (v.8) database using the stop-extended codon model. 
 
 
 ***
@@ -19,11 +19,6 @@ R code and data required to reproduce figures and supplementary figures for an a
 
 ***
 
-### License
-
-This project is licensed  - see the [LICENSE](LICENSE) file for details
-
-***
 
 
 
