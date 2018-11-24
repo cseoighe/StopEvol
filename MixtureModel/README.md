@@ -1,7 +1,7 @@
 ## Fit a mixture model to estimate the proportion of stop codons under purifying selection
 
 
-R code and data to fit a mixture model to data from the OrthoMaM (v.8) database to estimate the proportion of stop codons under purifying selection pressure
+R code and data to fit a mixture model to data from the OrthoMaM (v.8) database in order to estimate the proportion of stop codons under purifying selection pressure.
 
 ***
 
