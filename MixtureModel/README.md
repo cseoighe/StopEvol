@@ -38,21 +38,8 @@ Rscript mixture_model.rscript
 ```
 
 
-### Authors
-
-* **Cathal Seoighe**
-* **Stephen J. Kiniry**
-* **Andrew Peters**
-* **Pavel V. Baranov**
-* **Haixuan Yang**
-
 ***
 
-### License
-
-This project is licensed  - see the [LICENSE](LICENSE) file for details
-
-***
 
 
 
