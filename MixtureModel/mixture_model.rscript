@@ -29,7 +29,7 @@ model = 'MG'
 
 #######Read pre-processed output from codonphyml (kappa, omega and equilibrium frequencies)
 if(codon_frequencies_model == 'f3x4' & model == 'GY') {
-stats = read.table("Model_parameters.mgf3x4)
+stats = read.table("Model_parameters.mgf3x4")
 } else if(codon_frequencies_model == 'f1x4' & model == 'MG') {
 stats = read.table("Model_parameters.mgf1x4")
 } else {
