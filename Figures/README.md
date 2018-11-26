@@ -529,11 +529,11 @@ figure_sim_mix('sim_mix_gy.out')
 ***
 
 ### Output
-The Output is available in a:
+The Output is available in different formats:
 
 * ".pdf" document (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.pdf)**)
-* "html document (**[StopEvFigures.html](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.html)**
-* "R markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.Rmd)**
+* "html document (**[StopEvFigures.html](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.html)**)
+* "R markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.Rmd)**)
 
 ***
 
