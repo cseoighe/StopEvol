@@ -1,3 +1,8 @@
+---
+output:
+  word_document: default
+  html_document: default
+---
 ## Selection shapes synonymous stop codon use in mammals
 
 
@@ -54,10 +59,6 @@ ggplot(df, aes(proportion, fill = `stop codon`)) + theme_bw(base_size = 20) + ge
 
 figure1()
 ```
-***
-
-### Plot
-![Fig 1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.1.png)
 
 ***
 
@@ -122,13 +123,6 @@ figure2b()
 
 ***
 
-### Plot
-![Fig 2a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2A.png)
-
-![Fig 2b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2B.png)
-
-***
-
 ### Description
 [Fig S1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S1.png)
 
@@ -147,15 +141,14 @@ figure_sim_var = function(file) {
 #Fig S1: sim_mod_var
 figure_sim_var('sim_variable_phi.out')
 ```
-***
 
-### Plot
-![Fig S1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S1.png)
+***
 
 ### Description
 [Fig S2](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S2.png)
 
 Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding to the sequence alignments, under a stop-extended codon model based on GY with empirical codon frequencies obtained from introns of the same genes. Only genes with at least 1000bp of introns were used (see Methods for details). Simulated values of φ were sampled uniformly between 0 and 3. Branch lengths of the phylogenies were re-estimated under a different model to that used for the simulation (MG F1x4), using codonPhyml. The stop-extended codon model, based also on MG F1x4 was then fitted to the simulated alignments. The figure shows the maximum likelihood estimates, plotted against simulated values of φ . The identity line is shown in red.
+
 ***
 
 ### Code
@@ -169,10 +162,7 @@ figure_sim_var = function(file) {
 #Fig S2: sim_emp_var
 figure_sim_var('sim_empirical_variable.out')
 ```
-***
 
-### Plot
-![Fig S2](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S2.png)
 ***
 
 ### Description
@@ -195,14 +185,11 @@ figure_sim_mix('sim_mix.out')
 ```
 ***
 
-### Plot
-![Fig S3](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S3.png)
-***
-
 ### Description
 [Fig S4](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S4.png)
 
 Scatterplot showing the results of fitting the stop-extended model to the OrthoMaM alignments. The likelihood ratio test statistic ( 2∆lnL ) corresponding to the fit of the null model ( φ = 1) compared to the alternative model ( φ a free parameter) is plotted against the maximum likelihood estimate of φ . The horizontal line shows the critical value of the χ 2 distribution with one degree of freedom and the vertical line shows φ = 1 .
+
 ***
 
 ### Code
@@ -219,10 +206,7 @@ figure_phiscatter = function() {
 #Fig S4: phiscatter
 figure_phiscatter()
 ```
-***
 
-### Plot
-![Fig S4](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S4.png)
 ***
 
 ### Description
@@ -264,10 +248,7 @@ figure_chifit = function(file,ylim) {
 #Fig S6: sim_model
 figure_chifit("sim_model.out",ylim=1)
 ```
-***
 
-### Plot
-![Fig S6](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S6.png)
 ***
 
 ### Description
@@ -289,10 +270,7 @@ figure_chifit = function(file,ylim) {
 #Fig S7: sim_empirical
 figure_chifit("sim_empirical.out",ylim=.65)
 ```
-***
 
-### Plot
-![Fig S7](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S7.png)
 ***
 
 ### Description
@@ -315,10 +293,7 @@ figure_utrhist = function() {
 #Fig S8: utr_hist
 figure_utrhist()
 ```
-***
 
-### Plot
-![Fig S8](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S8.png)
 ***
 
 ### Description
@@ -348,10 +323,6 @@ figure_utrlen_model = function() {
 #Fig S9: utrlen_model
 figure_utrlen_model()
 ```
-***
-
-### Plot
-![Fig S9](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S9.png)
 
 ***
 
@@ -389,10 +360,6 @@ ggplot(predictdata,aes(x=genegc,y=predictProb)) +
 #Fig S10: complete_gc_logistic
 figure_complete_gc_logistic()
 ```
-***
-
-### Plot
-![Fig S10](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S10.png)
 
 ***
 
@@ -442,13 +409,7 @@ figure_complete_dNdS('b')
 figure_complete_dNdS('c')
 figure_complete_dNdS('d')
 ```
-***
 
-### Plot
-![Fig S11a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11a.png)
-![Fig S11b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11b.png)
-![Fig S11c](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11c.png)
-![Fig S11d](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11d.png)
 ***
 
 ### Description
@@ -505,10 +466,7 @@ figure_GCcontent = function() {
 #Fig S12: GCcontent
 figure_GCcontent()
 ```
-***
 
-### Plot
-![Fig S12](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S12.png)
 ***
 
 ### Description
@@ -527,17 +485,6 @@ figure_sim_mix = function(file) {
 }
 figure_sim_mix('sim_mix_gy.out')
 ```
-***
-
-### Plot
-
-![Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13.png)
-
-
-***
-
-### Output
-The Output is recorded in a ".pdf" document at: **[StopEvolFig.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvolFig.pdf)**
 
 ***
 
@@ -548,12 +495,3 @@ The Output is recorded in a ".pdf" document at: **[StopEvolFig.pdf](https://gith
 * **Andrew Peters**
 * **Pavel V. Baranov**
 * **Haixuan Yang**
-
-***
-
-
-Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
-
-When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
-
-The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
