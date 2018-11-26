@@ -2,7 +2,7 @@
 Title: "README.md"
 Author: "Cathal Seoighe & Andrew Peters"
 Date: "26 November 2018"
-Output: html_document "StopEvolFigures.html"
+Output: "StopEvolFigures.html"
 ---
 
 ## R Markdown
