@@ -489,3 +489,19 @@ figure_sim_mix('sim_mix_gy.out')
 ![Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13.png)
 
 ***
+***
+
+### Output
+The Output is recorded in a ".pdf" document at: **[StopEvolFig.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvolFig.pdf)**
+
+***
+
+### Authors
+
+* **Cathal Seoighe**
+* **Stephen J. Kiniry**
+* **Andrew Peters**
+* **Pavel V. Baranov**
+* **Haixuan Yang**
+
+***
