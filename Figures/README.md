@@ -12,7 +12,7 @@ R code and data required to reproduce figures and supplementary figures for our 
 
 ***
 
-### Information
+### Code and Figure Description
 
 ```{r}
 # Load in required package
@@ -42,7 +42,7 @@ figure1()
 ```
 
 
-**Fig. 1.** Estimated proportions of stop codons under purifying selection for all genes
+**Fig. 1:** Estimated proportions of stop codons under purifying selection for all genes
 (black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange,
 respectively (or umber, amber and opal, according to the colour nomenclature for stop
 codons). Each histograms was derived from 1000 bootstrap replicates of the data.
@@ -99,7 +99,7 @@ figure2b()
 ```
 
 
-**Fig. 2.** Estimated probability of stop codon conservation (and 95% confidence interval)
+**Fig. 2:** Estimated probability of stop codon conservation (and 95% confidence interval)
 as a function of (a) mRNA half-life and (b) ω for each stop codon. Conservation is
 based on model comparison in (a) and on complete sequence conservation across
 the alignment in (b). Estimates are from a logistic regression model, which included
@@ -120,13 +120,13 @@ figure_sim_var('sim_empirical_variable.out')
 ```
 
 
-Fig. S1. Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding
+**Fig. S1:** Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding
 to the sequence alignments, under a stop-extended codon model based on MG with the F1x4 model of codon frequencies. Simulated values of φ were sampled uniformly
 between 0 and 3. Branch lengths of the phylogenies were re-estimated from the simulated alignments, under the MG F1x4 model, using codonPhyml. The stop-extended codon
 model was then fitted to the simulated alignments. The figure shows the maximum likelihood estimates, plotted against simulated values of φ . The identity line is shown in red.
 
 
-Fig. S2. Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding
+**Fig. S2:** Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding
 to the sequence alignments, under a stop-extended codon model based on GY with empirical codon frequencies obtained from introns of the same genes. Only genes with
 at least 1000bp of introns were used (see Methods for details). Simulated values of φ were sampled uniformly between 0 and 3. Branch lengths of the phylogenies were
 re-estimated under a different model to that used for the simulation (MG F1x4), using codonPhyml. The stop-extended codon model, based also on MG F1x4 was then fitted to
@@ -145,7 +145,7 @@ figure_sim_mix('sim_mix.out')
 ```
 
 
-Fig. S3. Results of simulation to assess the accuracy and robustness to modeling assumptions of the estimate of the proportion of stop codons under selective constraint from
+**Fig. S3:** Results of simulation to assess the accuracy and robustness to modeling assumptions of the estimate of the proportion of stop codons under selective constraint from
 the mixture model. Data was simulated under the GY model with empirical codon frequencies derived from intron sequences, as described in Methods. For each of 100
 simulations, the proportion of genes under purifying selection was sampled uniformly between 0.1 and 0.8. The mixture model was fitted to the resulting alignments, under the
 MG model with the F1x4 model of codon frequencies. The figure shows the maximum likelihood value of the mixture weight corresponding to purifying selection, plotted against
@@ -166,7 +166,7 @@ figure_phiscatter()
 ```
 
 
-Fig. S4. Scatterplot showing the results of fitting the stop-extended model to the OrthoMaM alignments. The likelihood ratio test statistic ( 2∆lnL ) corresponding to the fit of
+**Fig. S4:** Scatterplot showing the results of fitting the stop-extended model to the OrthoMaM alignments. The likelihood ratio test statistic ( 2∆lnL ) corresponding to the fit of
 the null model ( φ = 1) compared to the alternative model ( φ a free parameter) is plotted against the maximum likelihood estimate of φ . The horizontal line shows the critical
 value of the χ 2 distribution with one degree of freedom and the vertical line shows φ = 1 .
 
@@ -181,7 +181,7 @@ figure_examplegenes()
 ```
 
 
-Fig. S5. An example of a gene with stop codon evolving at (a) a low and (b) a high rate. The phylogeny is coloured according to the stop codon colour nomenclature as in figure
+**Fig. S5:** An example of a gene with stop codon evolving at (a) a low and (b) a high rate. The phylogeny is coloured according to the stop codon colour nomenclature as in figure
 1. Taxa with gaps in the sequence alignment at the stop codon are indicated in grey. The genes corresponding to panels a and b are INSR and PARP1, respectively.
 
 ```{r}
@@ -202,10 +202,10 @@ figure_chifit("sim_empirical.out",ylim=.65)
 ```
 
 
-Fig. S6. Density plot of the likelihood ratio test statistic from simulations corresponding to figure S1. The red line shows the χ 2 distribution with one degree of freedom.
+**Fig. S6:** Density plot of the likelihood ratio test statistic from simulations corresponding to figure S1. The red line shows the χ 2 distribution with one degree of freedom.
 
 
-Fig. S7. Density plot of the likelihood ratio test statistic from simulations corresponding to figure S2. The red line shows the χ 2 distribution with one degree of freedom.
+**Fig. S7:** Density plot of the likelihood ratio test statistic from simulations corresponding to figure S2. The red line shows the χ 2 distribution with one degree of freedom.
 
 ```{r}
 ###########Figure S8: utr_hist - 3' UTR lengths histogram
@@ -221,7 +221,7 @@ figure_utrhist()
 ```
 
 
-Fig. S8. Histogram of 3 0 UTR lengths for genes with conserved/non-conserved stop codons (based on statistical model comparison). The figure has been truncated at 5kb (the
+**Fig. S8:** Histogram of 3 0 UTR lengths for genes with conserved/non-conserved stop codons (based on statistical model comparison). The figure has been truncated at 5kb (the
 8% of genes with 3 0 UTRs longer than this are not shown). Medians are shown as dashed vertical lines.
 
 ```{r}
@@ -247,7 +247,7 @@ figure_utrlen_model()
 ```
 
 
-Fig. S9. Estimated 3 0 UTR length (and 95% confidence interval) as a function of GC-content for genes with conserved and non-conserved stop codons (based on statistical
+**Fig. S9:** Estimated 3 0 UTR length (and 95% confidence interval) as a function of GC-content for genes with conserved and non-conserved stop codons (based on statistical
 model comparison). The number of taxa for which the stop codon was positionally homologous with the end of the alignment was also included as a covariate in the model.
 
 ```{r}
@@ -280,7 +280,7 @@ figure_complete_gc_logistic()
 ```
 
 
-Fig. S10. Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of GC-content. The plot is derived from a logistic regression
+**Fig. S10:** Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of GC-content. The plot is derived from a logistic regression
 model with interaction between stop codon and GC-content. This allows different slopes between the three lines, but no signifcant differences in the slope were observed. The
 number of taxa for which the stop codon was positionally homologous with the end of the alignment was included as a covariate in the model.
 
@@ -325,7 +325,7 @@ figure_complete_dNdS('d')
 ```
 
 
-Fig. S11. Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of (a) dN between human and mouse, (b) dS between human
+**Fig. S11:** Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of (a) dN between human and mouse, (b) dS between human
 and mouse, (c) dN between human and macaque and (d) dS between human and macaque. In all cases the x-axis is truncated to 1, as most of the divergence values are lower
 than this. The number of taxa for which the stop codon was positionally homologous with the end of the alignment was included as a covariate in the model.
 
@@ -378,7 +378,7 @@ figure_GCcontent()
 ```
 
 
-Fig. S12. Frequency of each stop codon in human protein-coding genes, as a function of GC-content.
+**Fig. S12:** Frequency of each stop codon in human protein-coding genes, as a function of GC-content.
 
 ```{r}
 ###########figure_sim_mix: check accuracy of mixture weight estimates
@@ -393,7 +393,7 @@ figure_sim_mix('sim_mix_gy.out')
 ```
 
 
-Fig. S13. The same simulations as in figure S3 but in this case the GY model with the F3x4 model of codon frequencies was used.
+**Fig. S13:** The same simulations as in figure S3 but in this case the GY model with the F3x4 model of codon frequencies was used.
 
 ### Authors
 
