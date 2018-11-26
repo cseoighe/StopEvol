@@ -1,13 +1,9 @@
 ---
-title: "StopEvolFigures.Rmd"
+title: "README.md"
 author: "Cathal Seoighe & Andrew Peters"
 date: "26 November 2018"
 output: html_document
 ---
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## R Markdown
 
