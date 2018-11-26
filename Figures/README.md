@@ -1,8 +1,8 @@
 ---
-title: "README.md"
-author: "Cathal Seoighe & Andrew Peters"
-date: "26 November 2018"
-output: html_document
+Title: "README.md"
+Author: "Cathal Seoighe & Andrew Peters"
+Date: "26 November 2018"
+Output: html_document "StopEvolFigures.html"
 ---
 
 ## R Markdown
@@ -36,7 +36,7 @@ figure1()
 ```
 
 
-Fig. 1. Estimated proportions of stop codons under purifying selection for all genes
+**Fig. 1.** Estimated proportions of stop codons under purifying selection for all genes
 (black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange,
 respectively (or umber, amber and opal, according to the colour nomenclature for stop
 codons). Each histograms was derived from 1000 bootstrap replicates of the data.
@@ -93,7 +93,7 @@ figure2b()
 ```
 
 
-Fig. 2. Estimated probability of stop codon conservation (and 95% confidence interval)
+**Fig. 2.** Estimated probability of stop codon conservation (and 95% confidence interval)
 as a function of (a) mRNA half-life and (b) ω for each stop codon. Conservation is
 based on model comparison in (a) and on complete sequence conservation across
 the alignment in (b). Estimates are from a logistic regression model, which included
