@@ -1,12 +1,18 @@
 ---
 Title: "README.md"
-Author: "Cathal Seoighe & Andrew Peters"
 Date: "26 November 2018"
 Output: "StopEvolFigures.html"
 ---
 
-## R Markdown
+## Selection shapes synonymous stop codon use in mammals
 
+
+R code and data required to reproduce figures and supplementary figures for our analysis of orthologue families from the OrthoMaM (v.8) database using the stop-extended codon model. 
+
+
+***
+
+### Information
 
 ```{r}
 # Load in required package
@@ -388,3 +394,13 @@ figure_sim_mix('sim_mix_gy.out')
 
 
 Fig. S13. The same simulations as in figure S3 but in this case the GY model with the F3x4 model of codon frequencies was used.
+
+### Authors
+
+* **Cathal Seoighe**
+* **Stephen J. Kiniry**
+* **Andrew Peters**
+* **Pavel V. Baranov**
+* **Haixuan Yang**
+
+***
