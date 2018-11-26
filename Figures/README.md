@@ -1,9 +1,3 @@
----
-Title: "README.md"
-Date: "26 November 2018"
-Output: "StopEvolFigures.html"
----
-
 ## Selection shapes synonymous stop codon use in mammals
 
 
@@ -394,6 +388,13 @@ figure_sim_mix('sim_mix_gy.out')
 
 
 **Fig. S13:** The same simulations as in figure S3 but in this case the GY model with the F3x4 model of codon frequencies was used.
+
+***
+
+### Output
+The Output is recorded in a ".pdf" document at: [StopEvolFig.pdf]("https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvolFig.pdf")
+
+***
 
 ### Authors
 
