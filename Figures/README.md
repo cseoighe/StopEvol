@@ -23,7 +23,7 @@ The following section describes:
 ### Description
 [Fig 1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.1.png)
 
-To estimate the proportion of stop codons evolving under the influence of purifying selection, we fitted our stop-extended codon model to the codon-aware alignments of mammalian orthologues, obtained from the OrthoMaM database, using a mixture distribution for the φ parameter. The mixture distribution consisted of two point masses, one with a variable φ < 1, corresponding to stop codons evolving under purifying selection and another with φ fixed at 1, corresponding to neutral evolution – i.e. substitutions between stop codons occurring at a rate consistent with the rate of synonymous substitutions in the coding region. We then used maximum likelihood to estimate the two free parameters of this mixture model (the φ parameter for the constrained stop codons and the mixture weight parameter).
+Estimated proportions of stop codons under purifying selection for all genes (black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange, respectively (or umber, amber and opal, according to the colour nomenclature for stop codons). Each histograms was derived from 1000 bootstrap replicates of the data.
 
 ***
 
