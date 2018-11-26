@@ -28,7 +28,8 @@ Estimated proportions of stop codons under purifying selection for all genes (bl
 ***
 
 ### Code
-```
+```{r}
+####Figure 1: mixture_histograms
 figure1 = function() {
 bootstraps = 1000
 Ws = read.table("Bootstraps.weights")
@@ -41,6 +42,9 @@ df = data.frame(proportion=proportion,stop_codon = stop_codon)
 colnames(df) = c("proportion","stop codon")
 ggplot(df, aes(proportion, fill = `stop codon`)) + theme_bw(base_size = 20) + geom_histogram( aes(y = ..density..), position = 'identity', binwidth=0.005) + scale_fill_manual(values=c("black", "orange", "gold","chocolate4")) + xlim(0.25,0.85)
 }
+################
+
+figure1()
 ```
 ***
 
@@ -82,6 +86,8 @@ figure2a = function() {
     guides(fill=guide_legend(title="Stop codon")) + ylim(0,0.45) +
     scale_fill_manual(values=c("darkorange","yellow","brown"))
   }
+  
+figure2a()
 ```
 ```
 #Figure 2b: Probability of conservation as a function of omega
@@ -102,6 +108,8 @@ ggplot(predictdata,aes(x=omega,y=predictProb)) + geom_ribbon(alpha=0.5,aes(ymin=
   guides(fill=guide_legend(title="Stop codon")) +
   scale_fill_manual(values=c("darkorange","yellow","brown"))
 }
+
+figure2b()
 ```
 
 ***
@@ -166,14 +174,15 @@ Results of simulation to assess the accuracy and robustness to modeling assumpti
 ***
 
 ### Code
-```
-#figure_sim_mix: check accuracy of mixture weight estimates
+```{r}
+###########figure_sim_mix: check accuracy of mixture weight estimates
 figure_sim_mix = function(file) {
   comp = read.table(file)
   colnames(comp) = c("Simulated","Estimated")
   ggplot(comp,aes(Simulated, Estimated)) + theme_bw(base_size = 20) + geom_point(alpha=0.5) + geom_abline(slope=1,intercept=0,col="red") + xlab("Simulated mixture weight") + ylab("Estimated mixture weight")
 }
 
+#Fig S3: sim_mix
 figure_sim_mix('sim_mix.out')
 ```
 ***
@@ -209,6 +218,26 @@ figure_phiscatter()
 ***
 
 ### Description
+**Fig. S5:** An example of a gene with stop codon evolving at (a) a low and (b) a high rate. The phylogeny is coloured according to the stop codon colour nomenclature as in figure
+1. Taxa with gaps in the sequence alignment at the stop codon are indicated in grey. The genes corresponding to panels a and b are INSR and PARP1, respectively.
+
+***
+
+### Code
+
+```{r}
+#######Figure: Example_genes
+figure_examplegenes = function() {
+  return("Figure S5 was produced by hand from trees obtained from Orthomam for INSR (a) and PARP1 (b)")
+}
+
+#Fig S5: example_genes
+figure_examplegenes()
+```
+
+***
+
+### Description
 [Fig S6](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S6.png)
 
 Density plot of the likelihood ratio test statistic from simulations corresponding to figure S1. The red line shows the χ 2 distribution with one degree of freedom.
@@ -224,7 +253,7 @@ figure_chifit = function(file,ylim) {
   sim$LRTstat = 2*sim$Delta_lnL 
   ggplot() + theme_bw(base_size = 20) + geom_density(data = sim, aes(LRTstat)) +xlab("\u0394 lnL") + geom_line(data=data.frame(x=x,y=dchisq(x,1)), aes(x=x,y=y), col="red") + ylim(c(0,ylim))
 }
-#Fig S7: sim_model
+#Fig S6: sim_model
 figure_chifit("sim_model.out",ylim=1)
 ```
 ***
@@ -249,7 +278,7 @@ figure_chifit = function(file,ylim) {
   sim$LRTstat = 2*sim$Delta_lnL 
   ggplot() + theme_bw(base_size = 20) + geom_density(data = sim, aes(LRTstat)) +xlab("\u0394 lnL") + geom_line(data=data.frame(x=x,y=dchisq(x,1)), aes(x=x,y=y), col="red") + ylim(c(0,ylim))
 }
-#Fig S8: sim_empirical
+#Fig S7: sim_empirical
 figure_chifit("sim_empirical.out",ylim=.65)
 ```
 ***
@@ -275,7 +304,7 @@ figure_utrhist = function() {
     geom_vline(aes(xintercept=median(utrlen[cons==0],na.rm=T)),col="darkblue", linetype = "dashed") + xlim(0,5000) #+ xlab('3` UTR Length`)
 }
 
-#Fig S9: utr_hist
+#Fig S8: utr_hist
 figure_utrhist()
 ```
 ***
@@ -308,7 +337,7 @@ figure_utrlen_model = function() {
     xlab("GC content") + ylab("3\' UTR length") + theme(panel.background = element_rect(fill= "white", colour="black"), panel.grid.minor = element_blank(), panel.grid.major = element_line(colour="grey88"))+
     guides(fill=guide_legend(title="Conservation"))
 }
-#Fig S10: utrlen_model
+#Fig S9: utrlen_model
 figure_utrlen_model()
 ```
 ***
@@ -349,7 +378,7 @@ ggplot(predictdata,aes(x=genegc,y=predictProb)) +
     scale_fill_manual(values=c("darkorange","yellow","brown"))
 }
 
-#Fig S11: complete_gc_logistic
+#Fig S10: complete_gc_logistic
 figure_complete_gc_logistic()
 ```
 ***
@@ -360,7 +389,7 @@ figure_complete_gc_logistic()
 ***
 
 ### Description
-[Fig S13a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13a.png) [Fig S13b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13b.png) [Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13c.png) [Fig S13d](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13d.png)
+[Fig S11a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11a.png) [Fig S11b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11b.png) [Fig S11d](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11c.png) [Fig S11d](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11d.png)
 
 Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of (a) dN between human and mouse, (b) dS between human and mouse, (c) dN between human and macaque and (d) dS between human and macaque. In all cases the x-axis is truncated to 1, as most of the divergence values are lower than this. The number of taxa for which the stop codon was positionally homologous with the end of the alignment was included as a covariate in the model.
 ***
@@ -399,7 +428,7 @@ ggplot(predictdata,aes(x=x,y=predictProb)) +
   scale_fill_manual(values=c("darkorange","yellow","brown"))
 }
 
-#Fig S12: complete_dNdS
+#Fig S11: complete_dNdS
 figure_complete_dNdS('a')
 figure_complete_dNdS('b')
 figure_complete_dNdS('c')
@@ -465,7 +494,7 @@ figure_GCcontent = function() {
   
 }
 
-#Fig S13: GCcontent
+#Fig S12: GCcontent
 figure_GCcontent()
 ```
 ***
@@ -496,7 +525,7 @@ figure_sim_mix('sim_mix_gy.out')
 
 ![Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13.png)
 
-***
+
 ***
 
 ### Output
