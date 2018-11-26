@@ -36,10 +36,7 @@ figure1()
 ```
 
 
-**Fig. 1:** Estimated proportions of stop codons under purifying selection for all genes
-(black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange,
-respectively (or umber, amber and opal, according to the colour nomenclature for stop
-codons). Each histograms was derived from 1000 bootstrap replicates of the data.
+**Fig. 1:** Estimated proportions of stop codons under purifying selection for all genes (black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange, respectively (or umber, amber and opal, according to the colour nomenclature for stop codons). Each histograms was derived from 1000 bootstrap replicates of the data.
 
 ```{r}
 ################## Figure 2: halflife_omega
