@@ -393,7 +393,7 @@ figure_sim_mix('sim_mix_gy.out')
 
 ### Output
 The Output is recorded in a ".pdf" document at: **[StopEvolFig.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvolFig.pdf)**
-
+The Output is recorded in a ".pdf" document at: **[StopEvolFig.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvolFig.Rmd)**
 ***
 
 ### Authors
