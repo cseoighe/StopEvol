@@ -18,6 +18,10 @@ The following section describes:
 ### R packages
 * Require ggplot2
 
+```{r}
+require(ggplot2)
+```
+
 ***
 
 ### Description
