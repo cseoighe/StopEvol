@@ -25,7 +25,7 @@ require(ggplot2)
 ***
 
 ### Description
-[Fig 1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.1.png)
+[Fig 1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.1.png)
 
 Estimated proportions of stop codons under purifying selection for all genes (black) and for genes with UGA, UAG and UGA shown in brown, yellow and orange, respectively (or umber, amber and opal, according to the colour nomenclature for stop codons). Each histograms was derived from 1000 bootstrap replicates of the data.
 
@@ -53,12 +53,12 @@ figure1()
 ***
 
 ### Plot
-![Fig 1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.1.png)
+![Fig 1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.1.png)
 
 ***
 
 ### Description
-[Fig 2a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2A.png) and [Fig 2b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2B.png)
+[Fig 2a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.2A.png) and [Fig 2b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.2B.png)
 
 Estimates are from a logistic regression model, which included
 the number of taxa for which the stop codon was positionally homologous with the
@@ -119,14 +119,14 @@ figure2b()
 ***
 
 ### Plot
-![Fig 2a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2A.png)
+![Fig 2a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.2A.png)
 
-![Fig 2b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/Fig.2B.png)
+![Fig 2b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.2B.png)
 
 ***
 
 ### Description
-[Fig S1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S1.png)
+[Fig S1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S1.png)
 
 Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding to the sequence alignments, under a stop-extended codon model based on MG with the F1x4 model of codon frequencies. Simulated values of φ were sampled uniformly between 0 and 3. Branch lengths of the phylogenies were re-estimated from the simulated alignments, under the MG F1x4 model, using codonPhyml. The stop-extended codon model was then fitted to the simulated alignments. The figure shows the maximum likelihood estimates, plotted against simulated values of φ . The identity line is shown in red
 
@@ -146,10 +146,10 @@ figure_sim_var('sim_variable_phi.out')
 ***
 
 ### Plot
-![Fig S1](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S1.png)
+![Fig S1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S1.png)
 
 ### Description
-[Fig S2](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S2.png)
+[Fig S2](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S2.png)
 
 Results of simulations based on 1,000 orthologue alignments, randomly sampled from OrthoMaM. Sequences were simulated over the phylogenetic trees corresponding to the sequence alignments, under a stop-extended codon model based on GY with empirical codon frequencies obtained from introns of the same genes. Only genes with at least 1000bp of introns were used (see Methods for details). Simulated values of φ were sampled uniformly between 0 and 3. Branch lengths of the phylogenies were re-estimated under a different model to that used for the simulation (MG F1x4), using codonPhyml. The stop-extended codon model, based also on MG F1x4 was then fitted to the simulated alignments. The figure shows the maximum likelihood estimates, plotted against simulated values of φ . The identity line is shown in red.
 ***
@@ -168,11 +168,11 @@ figure_sim_var('sim_empirical_variable.out')
 ***
 
 ### Plot
-![Fig S2](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S2.png)
+![Fig S2](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S2.png)
 ***
 
 ### Description
-[Fig S3](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S3.png)
+[Fig S3](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S3.png)
 
 Results of simulation to assess the accuracy and robustness to modeling assumptions of the estimate of the proportion of stop codons under selective constraint from the mixture model. Data was simulated under the GY model with empirical codon frequencies derived from intron sequences, as described in Methods. For each of 100 simulations, the proportion of genes under purifying selection was sampled uniformly between 0.1 and 0.8. The mixture model was fitted to the resulting alignments, under the MG model with the F1x4 model of codon frequencies. The figure shows the maximum likelihood value of the mixture weight corresponding to purifying selection, plotted against the proportion of alignments in the simulation for which the stop codon was under purifying selection. The identity line is shown in red.
 ***
@@ -192,11 +192,11 @@ figure_sim_mix('sim_mix.out')
 ***
 
 ### Plot
-![Fig S3](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S3.png)
+![Fig S3](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S3.png)
 ***
 
 ### Description
-[Fig S4](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S4.png)
+[Fig S4](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S4.png)
 
 Scatterplot showing the results of fitting the stop-extended model to the OrthoMaM alignments. The likelihood ratio test statistic ( 2∆lnL ) corresponding to the fit of the null model ( φ = 1) compared to the alternative model ( φ a free parameter) is plotted against the maximum likelihood estimate of φ . The horizontal line shows the critical value of the χ 2 distribution with one degree of freedom and the vertical line shows φ = 1 .
 ***
@@ -218,7 +218,7 @@ figure_phiscatter()
 ***
 
 ### Plot
-![Fig S4](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S4.png)
+![Fig S4](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S4.png)
 ***
 
 ### Description
@@ -242,7 +242,7 @@ figure_examplegenes()
 ***
 
 ### Description
-[Fig S6](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S6.png)
+[Fig S6](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S6.png)
 
 Density plot of the likelihood ratio test statistic from simulations corresponding to figure S1. The red line shows the χ 2 distribution with one degree of freedom.
 ***
@@ -263,11 +263,11 @@ figure_chifit("sim_model.out",ylim=1)
 ***
 
 ### Plot
-![Fig S6](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S6.png)
+![Fig S6](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S6.png)
 ***
 
 ### Description
-[Fig S7](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S7.png)
+[Fig S7](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S7.png)
 
 Density plot of the likelihood ratio test statistic from simulations corresponding to figure S2. The red line shows the χ 2 distribution with one degree of freedom.
 ***
@@ -288,11 +288,11 @@ figure_chifit("sim_empirical.out",ylim=.65)
 ***
 
 ### Plot
-![Fig S7](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S7.png)
+![Fig S7](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S7.png)
 ***
 
 ### Description
-[Fig S8](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S8.png)
+[Fig S8](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S8.png)
 
 Histogram of 3 0 UTR lengths for genes with conserved/non-conserved stop codons (based on statistical model comparison). The figure has been truncated at 5kb (the
 8% of genes with 3 0 UTRs longer than this are not shown). Medians are shown as dashed vertical lines.
@@ -314,11 +314,11 @@ figure_utrhist()
 ***
 
 ### Plot
-![Fig S8](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S8.png)
+![Fig S8](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S8.png)
 ***
 
 ### Description
-[Fig S9](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S9.png)
+[Fig S9](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S9.png)
 
 Estimated 3 prime UTR length (and 95% confidence interval) as a function of GC-content for genes with conserved and non-conserved stop codons (based on statistical model comparison). The number of taxa for which the stop codon was positionally homologous with the end of the alignment was also included as a covariate in the model.
 ***
@@ -347,12 +347,12 @@ figure_utrlen_model()
 ***
 
 ### Plot
-![Fig S9](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S9.png)
+![Fig S9](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S9.png)
 
 ***
 
 ### Description
-[Fig S10](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S10.png)
+[Fig S10](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S10.png)
 
 Estimated probability of complete sequence conservation (and 95% confidence interval) as a function of GC-content. The plot is derived from a logistic regression model with interaction between stop codon and GC-content. This allows different slopes between the three lines, but no signifcant differences in the slope were observed. The number of taxa for which the stop codon was positionally homologous with the end of the alignment was included as a covariate in the model.
 ***
@@ -388,7 +388,7 @@ figure_complete_gc_logistic()
 ***
 
 ### Plot
-![Fig S10](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S10.png)
+![Fig S10](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S10.png)
 
 ***
 
@@ -441,14 +441,14 @@ figure_complete_dNdS('d')
 ***
 
 ### Plot
-![Fig S11a](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11a.png)
-![Fig S11b](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11b.png)
-![Fig S11c](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11c.png)
-![Fig S11d](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S11d.png)
+![Fig S11a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S11a.png)
+![Fig S11b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S11b.png)
+![Fig S11c](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S11c.png)
+![Fig S11d](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S11d.png)
 ***
 
 ### Description
-[Fig S12](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S12.png)
+[Fig S12](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S12.png)
 
 Frequency of each stop codon in human protein-coding genes, as a function of GC-content.
 ***
@@ -504,11 +504,11 @@ figure_GCcontent()
 ***
 
 ### Plot
-![Fig S12](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S12.png)
+![Fig S12](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S12.png)
 ***
 
 ### Description
-[Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13.png)
+[Fig S13](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S13.png)
 
 The same simulations as in figure S3 but in this case the GY model with the F3x4 model of codon frequencies was used.
 ***
@@ -527,7 +527,7 @@ figure_sim_mix('sim_mix_gy.out')
 
 ### Plot
 
-![Fig S13](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/S13.png)
+![Fig S13](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S13.png)
 
 
 ***
@@ -535,8 +535,8 @@ figure_sim_mix('sim_mix_gy.out')
 ### Output
 The Output is available in different formats:
 
-* "pdf" document (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.pdf)**)
-* "R markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/AP_test/Figures/StopEvFigures.Rmd)**)
+* "pdf" document (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvFigures.pdf)**)
+* "R markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures//StopEvFigures.Rmd)**)
 
 ***
 
