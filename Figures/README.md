@@ -250,7 +250,7 @@ figure_examplegenes()
 
 ### Plot
 ![Fig S5a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5a.png)
-![Fig S5b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5b.png)
+
 
 ***
 
