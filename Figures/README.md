@@ -6,6 +6,11 @@ R code and data required to reproduce figures and supplementary figures for our 
 
 ***
 
+### Output
+The code can be re-ran in an "R Markdown" document ((**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures//StopEvFigures.Rmd)**). The ouput of this document is also present in "pdf" format (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvFigures.pdf)**).
+
+***
+
 ### Figures
 The following section describes:
 * "R" packages
@@ -529,14 +534,6 @@ figure_sim_mix('sim_mix_gy.out')
 
 ![Fig S13](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S13.png)
 
-
-***
-
-### Output
-The Output is available in different formats:
-
-* "pdf" document (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvFigures.pdf)**)
-* "R markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures//StopEvFigures.Rmd)**)
 
 ***
 
