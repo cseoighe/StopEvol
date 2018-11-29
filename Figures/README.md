@@ -7,11 +7,10 @@ R code and data required to reproduce figures and supplementary figures for our 
 ***
 
 ### Output
-The code can be re-ran in an "R Markdown" document ((**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures//StopEvFigures.Rmd)**). The ouput of this document is also present in "pdf" format (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvFigures.pdf)**).
+The code can be re-ran in an "R Markdown" document (**[StopEvFigures.Rmd](https://github.com/cseoighe/StopEvol/blob/master/Figures//StopEvFigures.Rmd)**). The ouput of this document is also present in "pdf" format (**[StopEvFigures.pdf](https://github.com/cseoighe/StopEvol/blob/master/Figures/StopEvFigures.pdf)**).
 
 ***
 
-### Figures
 The following section describes:
 * "R" packages
 * Description
