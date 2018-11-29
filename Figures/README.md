@@ -11,7 +11,7 @@ The code can be re-ran in an "R Markdown" document (**[StopEvFigures.Rmd](https:
 
 ***
 
-The following section describes:
+The following sections describe:
 * "R" packages
 * Description
 * Code used to generate each figure
@@ -20,7 +20,7 @@ The following section describes:
 ***
 
 ### R packages
-* Require ggplot2
+Require ggplot2
 
 ```{r}
 require(ggplot2)
