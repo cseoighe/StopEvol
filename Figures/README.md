@@ -226,7 +226,9 @@ figure_phiscatter()
 ***
 
 ### Description
-**Fig. S5:** An example of a gene with stop codon evolving at (a) a low and (b) a high rate. The phylogeny is coloured according to the stop codon colour nomenclature as in figure
+[Fig S5a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5a.png) [Fig S5b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5b.png)
+
+An example of a gene with stop codon evolving at (a) a low and (b) a high rate. The phylogeny is coloured according to the stop codon colour nomenclature as in figure
 
 Taxa with gaps in the sequence alignment at the stop codon are indicated in grey. The genes corresponding to panels a and b are INSR and PARP1, respectively.
 
@@ -243,6 +245,12 @@ figure_examplegenes = function() {
 #Fig S5: example_genes
 figure_examplegenes()
 ```
+
+***
+
+### Plot
+![Fig S5a](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5a.png)
+![Fig S5b](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/S5b.png)
 
 ***
 
