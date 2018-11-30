@@ -42,7 +42,7 @@ Rscript bootstrap.rscript
 
 ### Output 
 
-Produces 4 RData files - "mixture_model_se_bs1000[all|UGA|UAG|UAA].RData"
+Produces 4 RData files - "mixture_model_se_bs1000[all|UGA|UAG|UAA].RData".
 
 Examples:
 
