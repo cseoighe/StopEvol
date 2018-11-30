@@ -44,10 +44,10 @@ Rscript bootstrap.rscript
 
 Produces 4 RData files - "mixture_model_se_bs1000[all|UGA|UAG|UAA].RData":
 
-* All [mixture_model_se_bs1000all.RData](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000all.RData)
-* UGA [mixture_model_se_bs1000UGA.RData](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UGA.RData)
-* UAG [mixture_model_se_bs1000UAG.RData](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UAG.RData)
-* UAA [mixture_model_se_bs1000UAA.RData](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UAA.RData)
+* [All](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000all.RData)
+* [UGA](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UGA.RData)
+* [UAG](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UAG.RData)
+* [UAA](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UAA.RData)
 
 Each contains 1000 bootstrap estimates for phis and weights. 
 
