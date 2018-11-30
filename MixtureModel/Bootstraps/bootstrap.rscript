@@ -16,8 +16,8 @@ require(expm)
 require(ape)
 
 #configuration
-CDAlign_file="Stop_codons"
-prep_trees_file="Trees"
+CDAlign_file="../Stop_codons"
+prep_trees_file="../Trees"
 writeout = "mixture_model"
 print(writeout)
 
@@ -27,7 +27,7 @@ codon_frequencies_model = 'f1x4'
 #model = 'GY'
 model = 'MG'
 
-prep_stats_file="Model_parameters.mgf1x4"
+prep_stats_file="../Model_parameters.mgf1x4"
 
 
 step=0.05
