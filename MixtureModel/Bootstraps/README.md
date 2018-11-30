@@ -7,7 +7,7 @@ R code and data (same data as the mixture model uses) in order to perform a boot
 
 ### R Scripts
 
-bootstrap.rscript
+[bootstrap.Rscript](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/bootstrap.Rscript)
 
 ***
 
