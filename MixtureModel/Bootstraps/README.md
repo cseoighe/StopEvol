@@ -19,7 +19,7 @@ R code and data (same data as the mixture model uses) in order to perform a boot
 
 ### Input files 
 
-The following files (used in the mixture model) must be located in the parent directory of the script:
+The following files (used in the mixture model) must be located in the working directory of the script:
 
 * [Trees](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/Trees). Concatenated trees corresponding to 12,336 orthologue families from the OrthoMaM (v.8) database (only families with at least 20 taxa for which there is a stop codon at the last position of the alignment are included).  
 * [Stop_codons](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/Stop_codons). The stop codon found at the end of the alignment for each taxon for each orthologue family (the orthologue families appear in the same order as for the concatenated trees). Stop codons are encoded as 1, 2, 3 for UAG, UGA and UAA, respectively (taxa with a gap or a codon other than a stop codon are encoded as NA). 
