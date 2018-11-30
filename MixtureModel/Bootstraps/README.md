@@ -42,7 +42,8 @@ Rscript bootstrap.rscript
 
 ### Output 
 
-Produces 4 RData files - "mixture_model_se_bs1000[all|UGA|UAG|UAA].RData":
+Produces 4 RData files - "mixture_model_se_bs1000[all|UGA|UAG|UAA].RData"
+Examples:
 
 * [All](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000all.RData)
 * [UGA](https://github.com/cseoighe/StopEvol/blob/master/MixtureModel/Bootstraps/mixture_model_se_bs1000UGA.RData)
