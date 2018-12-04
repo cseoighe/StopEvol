@@ -22,6 +22,7 @@ setup_all = function() {
   stats = read.table(prep_stats_file)
   kappa = stats[,2]
   omega = stats[,3]
+  treescale = stats[,8]
   
   
   ###############Set up the template generator matrix############
@@ -186,6 +187,7 @@ setup_all = function() {
     ###### Calculate the TPM matrix for phi = 1
     tree = Trees[[ii]]
     edges = tree$edge
+    tree$edge.length = tree$edge.length * treescale[ii]
     TPM_n = array(rep(0,3*3*nrow(edges)),dim=c(nrow(edges),3,3))
     for(i in 1:nrow(edges)){ ###### Probably inefficiency here 
       TPM_n[i,,] = expm(tree$edge.length[i]*RS[[ii]])

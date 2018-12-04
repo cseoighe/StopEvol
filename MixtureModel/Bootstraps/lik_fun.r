@@ -10,6 +10,7 @@ w1 = pars[2]
 LL = 0
 	for(ii in 1:nrow(CDAlign)) {
 	tree = Trees[[ii]]
+	tree$edge.length = tree$edge.length * treescale[ii]
   	cdAlign = CDAlign[ii,]
 	pi = PIlist[[ii]]
   	edges = tree$edge
