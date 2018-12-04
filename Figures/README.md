@@ -57,7 +57,7 @@ figure1()
 ***
 
 ### Plot
-![Fig 1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig..png)
+![Fig 1](https://github.com/cseoighe/StopEvol/blob/master/Figures/Figs/Fig.1.png)
 
 ***
 
