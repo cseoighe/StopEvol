@@ -29,9 +29,10 @@ model = 'MG'
 
 #######Read pre-processed output from codonphyml (kappa, omega and equilibrium frequencies)
 if(codon_frequencies_model == 'f3x4' & model == 'GY') {
-stats = read.table("Model_parameters.mgf3x4")
+stats = read.table("Model_parameters.gyf3x4")
 } else if(codon_frequencies_model == 'f1x4' & model == 'MG') {
 stats = read.table("Model_parameters.mgf1x4")
+treescale = stats[,8]
 } else {
 print("Data for the model combination not available")
 return(NA)
@@ -123,6 +124,7 @@ for (i in 1:64) {
 Trees = read.tree("Trees")
 Trees = reorder(Trees,"postorder")
 
+
 ##############Calculate a matrix of codon equilibrium frequencies (rows are genes, columns are codons)
 if(codon_frequencies_model == 'f3x4') {
 PI3x4 = array(rep(0,nrow(stats)*64),c(nrow(stats),64))
@@ -199,11 +201,13 @@ PIlist[[ii]] = diag(PI)[62:64]
 ###### Calculate the TPM matrix for phi = 1
 tree = Trees[[ii]]
 edges = tree$edge
+tree$edge.length = tree$edge.length * treescale[ii]
 TPM_n = array(rep(0,3*3*nrow(edges)),dim=c(nrow(edges),3,3))
 	for(i in 1:nrow(edges)){ ###### Probably inefficiency here 
   	TPM_n[i,,] = expm(tree$edge.length[i]*RS[[ii]])
 	}
 TPM_n_list[[ii]] = TPM_n
+
 }
 
 
@@ -224,8 +228,11 @@ felsen=function(tree, node, cdAlign, TPM) {
   return(prod)
 }
 
-#Takes parameters: phi_low and w1 (the phi value for stop codons under purifying selection 
-#and the proportion of stop codons under purifying selection,respectively.
+
+
+
+
+#Takes parameters: omega, phi
 lik_fun = function(pars) {
 phi_low = pars[1]
 w1 = pars[2]
@@ -235,6 +242,7 @@ w1 = pars[2]
 LL = 0
 	for(ii in 1:nrow(CDAlign)) {
 	tree = Trees[[ii]]
+	tree$edge.length = tree$edge.length * treescale[ii]
   	cdAlign = CDAlign[ii,]
 	pi = PIlist[[ii]]
   	edges = tree$edge
@@ -253,4 +261,7 @@ return(LL)
 
 
 m0.out = optim(c(0.1,.5),lik_fun,control=list(fnscale=-1))
+
+print(writeout)
+
 write(c(m0.out$par,m0.out$value,m0.out$convergence),writeout)
