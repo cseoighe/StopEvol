@@ -143,9 +143,6 @@ Mg_mult = array(c(rep(0, 4096)), dim = c(64, 64))
 	}
 
 #Scale the generator matrix
-#scale_fac = sum(PI%*%R)
-#Scale the generator matrix (using only the sense codon part, since this is the part that influences the branch length estimates
-#scale_fac = sum(PI[1:61,1:61]%*%R[1:61,1:61])
 scale_fac = sum(PI%*%R)
 
 R = (1/scale_fac)*R
@@ -213,7 +210,7 @@ treescale = pars[3]
   for(i in 1:ncol(cdAlign)) {
   likelihood = likelihood + log(sum(diag(PI)*felsen(i, tree, edges[nrow(edges),1], cdAlign,TPM)))
   }
-print(c(pars,likelihood))
+  print(c(pars,likelihood))
   return(likelihood)
 }
 
